@@ -1,0 +1,26 @@
+{
+  "name": "i-need-a-team",
+  "version": "1.0.0",
+  "description": "Module 10 Challenge",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paullsshin/i-need-a-team.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paullsshin/i-need-a-team/issues"
+  },
+  "homepage": "https://github.com/paullsshin/i-need-a-team#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
