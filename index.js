@@ -9,7 +9,7 @@ const Manager = require('./lib/Manager.js');
 let employees = [];
 let manager = {};
 
-const chooseYourWorker = async () => {
+const selectWorker = async () => {
     return inquirer
     .prompt([
         {
@@ -24,6 +24,47 @@ const chooseYourWorker = async () => {
 inquirer
     .prompt([
         {
-            
-        }
+            type: 'input',
+            name: 'ManagerName',
+            message: 'What is the name of your manager?',
+        },
+        {
+            type: 'input',
+            name: 'ManagerId',
+            message: 'What is your manager ID number?',
+        },
+        {
+            type: 'input',
+            name: 'ManagerEmail',
+            message: 'What is a good email for your manager?',
+        },
+        {
+            type: 'input',
+            name: 'OfficeNumber',
+            message: "What is your manager's office number?",
+        },
     ])
+
+    .then((managerData) => {
+        manager = {
+            ManagerName: managerData.ManagerName,
+            ManagerId: managerData.ManagerId,
+            ManagerEmail: managerData.ManagerEmail,
+            OfficeNumber: managerData.OfficeNumber,
+        };
+
+        chooseYourWorker();
+    });
+
+    function chooseYourWorker() {
+        selectWorker().then(async (data) => {
+            if(data.choice === 'Add Engineer') {
+                inquirer
+                .prompt([
+                    {
+                        type: 
+                    }
+                ])
+            }
+        })
+    }
