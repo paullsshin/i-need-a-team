@@ -2,13 +2,13 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const path = require('path');
 const generateHTML = require('./src/generateHTML');
-// const Employee = require('./lib/Employee.js');
-// const Engineer = require('./lib/Engineer.js');
-// const Intern = require('./lib/Intern.js');
-// const Manager = require('./lib/Manager.js');
+const Employee = require('./lib/Employee.js');
+const Engineer = require('./lib/Engineer.js');
+const Intern = require('./lib/Intern.js');
+const Manager = require('./lib/Manager.js');
 
-let employees = [];
-let manager = {};
+// let employees = [];
+// let manager = {};
 
 const selectWorker = async () => {
     return inquirer
