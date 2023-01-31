@@ -1,7 +1,7 @@
 const Employee = require('../lib/Employee');
 
-test('Employee testing', () => {
-    test('Instance testing', () => {
+describe('Employee testing', () => {
+    describe('Instance testing', () => {
         it('Should try to return the instance of the employee', () => {
 
             const employee = new Employee('Bobby', '1', 'bobby1@hotmail.com');
@@ -10,28 +10,28 @@ test('Employee testing', () => {
         });
     });
     // testing the employee information
-    test('Employee Name Testing', () => {
+    describe('Employee Name Testing', () => {
         it('Should return the given employee name', () => {
             const employee = new Employee('Bobby', '1', 'bobby1@hotmail.com');
 
             expect(employee.getName()).toEqual('Bobby');
         });
     });
-    test('Employee ID Testing', () => {
+    describe('Employee ID Testing', () => {
         it('Should return the given employee ID number', () => {
             const employee = new Employee('Bobby', '1', 'bobby1@hotmail.com');
             
             expect(employee.getID()).toEqual('1');
         });
     });
-    test('Employee Email Testing', () => {
+    describe('Employee Email Testing', () => {
         it('Should return the given employee email address', () => {
             const employee = new Employee('Bobby', '1', 'bobby1@hotmail.com');
             
             expect(employee.getEmail()).toEqual('bobby1@hotmail.com');
         });
     });
-    test('Employee Role Testing', () => {
+    describe('Employee Role Testing', () => {
         it('Should return the given employee email address', () => {
             const employee = new Employee('Bobby', '1', 'bobby1@hotmail.com');
             

@@ -1,48 +1,48 @@
-const Engineer = require('../lib/Engineer');
+const Manager = require('../lib/Manager');
 
-describe('Engineer testing', () => {
+describe('Manager testing', () => {
     describe('Instance testing', () => {
-        it('Should try to return the instance of the Engineer', () => {
+        it('Should try to return the instance of the Manager', () => {
 
-            const engineer = new Engineer('Bobby', '001', 'bobby1@hotmail.com', 'Bobbysgithub');
+            const manager = new Manager('Bobby', '1', 'bobby1@hotmail.com', '425-123-1234');
 
-            expect(engineer instanceof Engineer).toEqual(true);
+            expect(manager instanceof Manager).toEqual(true);
         });
     });
-    // testing the Engineer information
-    describe('Engineer Name Testing', () => {
-        it('Should return the given Engineer name', () => {
-            const engineer = new Engineer('Bobby', '001', 'bobby1@hotmail.com', 'Bobbysgithub');
+    // testing the Manager information
+    describe('Manager Name Testing', () => {
+        it('Should return the given Manager name', () => {
+            const manager = new Manager('Bobby', '1', 'bobby1@hotmail.com', '425-123-1234');
 
-            expect(engineer.getName()).toEqual('Bobby');
+            expect(manager.getName()).toEqual('Bobby');
         });
     });
-    describe('Engineer ID Testing', () => {
-        it('Should return the given Engineer ID number', () => {
-            const engineer = new Engineer('Bobby', '001', 'bobby1@hotmail.com', 'Bobbysgithub');
+    describe('Manager ID Testing', () => {
+        it('Should return the given Manager ID number', () => {
+            const manager = new Manager('Bobby', '1', 'bobby1@hotmail.com', '425-123-1234');
             
-            expect(engineer.getID()).toEqual('001');
+            expect(manager.getID()).toEqual('1');
         });
     });
-    describe('Engineer Email Testing', () => {
-        it('Should return the given Engineer email address', () => {
-            const engineer = new Engineer('Bobby', '001', 'bobby1@hotmail.com', 'Bobbysgithub');
+    describe('Manager Email Testing', () => {
+        it('Should return the given Manager email address', () => {
+            const manager = new Manager('Bobby', '1', 'bobby1@hotmail.com', '425-123-1234');
             
-            expect(engineer.getEmail()).toEqual('bobby1@hotmail.com', 'Bobbysgithub');
+            expect(manager.getEmail()).toEqual('bobby1@hotmail.com', '425-123-1234');
         });
     });
-    describe('Engineer Github Testing', () => {
-        it('Should return the given Engineer email address', () => {
-            const engineer = new Engineer('Bobby', '001', 'bobby1@hotmail.com', 'Bobbysgithub');
+    describe('Manager Office Number Testing', () => {
+        it('Should return the given Manager email address', () => {
+            const manager = new Manager('Bobby', '1', 'bobby1@hotmail.com', '425-123-1234');
             
-            expect(engineer.getGithub()).toEqual('Bobbysgithub');
+            expect(manager.getOfficeNumber()).toEqual('425-123-1234');
         });
     });
-    describe('Engineer Role Testing', () => {
-        it('Should return the given Engineer email address', () => {
-            const engineer = new Engineer('Bobby', '001', 'bobby1@hotmail.com', 'Bobbysgithub');
+    describe('Manager Role Testing', () => {
+        it('Should return the given Manager email address', () => {
+            const manager = new Manager('Bobby', '1', 'bobby1@hotmail.com', '425-123-1234');
             
-            expect(engineer.getRole()).toEqual('Engineer');
+            expect(manager.getRole()).toEqual('Manager');
         });
     });
 });
