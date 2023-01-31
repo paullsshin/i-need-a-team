@@ -1,26 +1,48 @@
-const { default: test } = require('node:test');
-const Employee = require('../lib/Employee.js');
+const Engineer = require('../lib/Engineer');
 
-const employee = new Employee('Bobby', '1234', 'gibberish@mail.com');
+test('Engineer testing', () => {
+    test('Instance testing', () => {
+        it('Should try to return the instance of the Engineer', () => {
 
-test('testing to see if it will return the values that have been entered', () => {
-    expect(employee.name).toBe('Bobby');
-    expect(employee.id).toBe('1234');
-    expect(employee.email).toBe('gibberish@mail.com');
-});
+            const engineer = new Engineer('Bobby', '1', 'bobby1@hotmail.com', 'Bobbysgithub');
 
-test('testing to see if the name will return', () => {
-    expect(employee.getName()).toBe('Bobby');
-});
+            expect(engineer instanceof Engineer).toEqual(true);
+        });
+    });
+    // testing the Engineer information
+    test('Engineer Name Testing', () => {
+        it('Should return the given Engineer name', () => {
+            const engineer = new Engineer('Bobby', '1', 'bobby1@hotmail.com', 'Bobbysgithub');
 
-test('test if we can return the the ID', () => {
-    expect(employee.getId()).toBe('1234');
-});
-
-test('test if we can return the email', () => {
-    expect(employee.getEmail()).toBe('gibberish@mail.com');
-});
-
-test('test if we can return the role', () => {
-    expect(employee.getRole()).toBe('Employee');
+            expect(engineer.getName()).toEqual('Bobby');
+        });
+    });
+    test('Engineer ID Testing', () => {
+        it('Should return the given Engineer ID number', () => {
+            const engineer = new Engineer('Bobby', '1', 'bobby1@hotmail.com', 'Bobbysgithub');
+            
+            expect(engineer.getID()).toEqual('1');
+        });
+    });
+    test('Engineer Email Testing', () => {
+        it('Should return the given Engineer email address', () => {
+            const engineer = new Engineer('Bobby', '1', 'bobby1@hotmail.com', 'Bobbysgithub');
+            
+            expect(engineer.getEmail()).toEqual('bobby1@hotmail.com', 'Bobbysgithub');
+        });
+    });
+    test('Engineer Github Testing', () => {
+        it('Should return the given Engineer email address', () => {
+            const engineer = new Engineer('Bobby', '1', 'bobby1@hotmail.com', 'Bobbysgithub');
+            
+            expect(engineer.getGithub()).toEqual('Bobbysgithub');
+        });
+    });
+    test('Engineer Role Testing', () => {
+        it('Should return the given Engineer email address', () => {
+            const engineer = new Engineer('Bobby', '1', 'bobby1@hotmail.com', 'Bobbysgithub');
+            
+            expect(engineer.getRole()).toEqual('Engineer');
+        });
+    });
 });
