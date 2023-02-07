@@ -13,7 +13,7 @@ class Group {
 
     this.memberPosition = "Manager";
   }
-
+// manager's input
   memberInput() {
     if (this.memberPosition === "Manager") {
       inquirer
@@ -61,6 +61,8 @@ class Group {
           this.groupMembers.push(managerStats);
           this.memberInput();
         });
+
+        // engineer's input
     } else if (this.memberPosition === "Engineer") {
       inquirer
         .prompt([
@@ -107,6 +109,8 @@ class Group {
           this.groupMembers.push(engineerStats);
           this.memberInput();
         });
+
+        // intern's input
     } else if (this.memberPosition === "Intern") {
       inquirer
         .prompt([
@@ -153,6 +157,8 @@ class Group {
           this.groupMembers.push(internStats);
           this.memberInput();
         });
+
+        // writing the index.html file
     } else {
       fs.writeFile("dist/index.html", createHtml(this.groupMembers), (error) =>
         error
