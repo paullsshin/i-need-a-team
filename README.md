@@ -17,7 +17,8 @@
 ## __Overview__ 🔎
 
 This application will alow the user to create and generate a webpage that displays their team's information.
-![Video](https://drive.google.com/file/d/1mpCUr8P6nnR5R2zfeZDnk90TGaCq9eGF/view)
+
+[Walkthrough Video](https://drive.google.com/file/d/1mpCUr8P6nnR5R2zfeZDnk90TGaCq9eGF/view)
 
 ![screenshots](./src/img/Screenshot%202023-02-07%2015.13.50.png)
 
